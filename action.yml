@@ -18,6 +18,7 @@ inputs:
   args:
     required: false
     description: Optional arguments. For more details https://jmeter.apache.org/usermanual/get-started.html#non_gui
+    default: "-e -o result.jtl"
 
 runs:
   using: 'docker'
