@@ -12,7 +12,7 @@ ENV JMETER_CMD_RUNNER_VERSION "2.3"
 ENV JMETER_PLUGIN_MANAGER_VERSION "1.7"
 
 COPY entrypoint.sh /entrypoint.sh
-COPY jmeter-plugin-install.sh /jmeter-plugin-install.sh
+# COPY jmeter-plugin-install.sh /jmeter-plugin-install.sh
 
 # Downloading JMeter
 RUN apk --no-cache add curl ca-certificates openjdk9-jre && \
@@ -23,7 +23,7 @@ RUN apk --no-cache add curl ca-certificates openjdk9-jre && \
     rm /tmp/apache-jmeter-${JMETER_VERSION}.tgz && \
     rm -rf /var/cache/apk/* && \
     chmod a+x /entrypoint.sh && \
-    chmod a+x /jmeter-plugin-install.sh
+#     chmod a+x /jmeter-plugin-install.sh
 
 # Downloading CMD Runner
 # RUN /jmeter-plugin-install.sh
