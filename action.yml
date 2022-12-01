@@ -14,7 +14,7 @@ inputs:
   result-file:
     required: false
     description: jmeter test result file
-    defaults: result.jtl
+    default: result.jtl
   args:
     required: false
     description: Optional arguments. For more details https://jmeter.apache.org/usermanual/get-started.html#non_gui
